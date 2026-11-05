@@ -19,7 +19,7 @@
 import {
   createOnrampServerKit,
   createSessionRouteHandler,
-} from '@crcl-main/onramp-kit/server'
+} from '@circle-fin/onramp-kit/server'
 import { API_BASE_URL, ENVIRONMENT } from '@/lib/server-environment'
 import { WIDGET_BASE_URL } from '@/lib/onramp-environment'
 
@@ -38,7 +38,7 @@ if (!kitKey) {
 // defaults, https://api.circle.com and https://onramp.arc.io, which is mainnet
 // and moves real money.
 const server = createOnrampServerKit({
-  kitKey,
+  apiKey: kitKey,
   baseUrl: API_BASE_URL,
   widgetBaseUrl: WIDGET_BASE_URL,
 })
